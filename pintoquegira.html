@@ -1,0 +1,44 @@
+<html lang="pt-br">
+    <head>
+    	<title>pinto que gira</title>
+        <meta name="viewport" content="width=device-width"/>
+        <style>
+            @charset "utf-8";
+            *{margin:0;}
+            body {
+            background-color: #191919;
+            text-align: center;
+            }
+            div#pintodiv {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="pintodiv">
+            <img id="pinto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaGt0ANASK8L_0i8zDLrM6YgjUXgmmj9-ccg&usqp=CAU"/>
+        </div>
+        <script>
+            var  pintov = document.getElementById("pinto");
+            var click = false;
+               
+                  pintov.addEventListener("click", function(){
+            	
+            	if(!click){
+            		pintov.style.transform = "rotate(-1000000deg)";
+            		pintov.style.transition = "transform 100s";
+            		click = true;
+            	}else{
+            		pintov.style.transform = "rotate(0deg)";
+            		pintov.style.transition = "transform 1s";
+            		click = false;
+            	}
+            	
+            });
+            
+        </script>
+    </body>
+</html>
